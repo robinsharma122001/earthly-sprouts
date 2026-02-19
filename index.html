@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Earthly Sprouts | Premium Natural Nutrition</title>
 
-<meta name="description" content="Earthly Sprouts — Premium hygienically packed sprouts for daily nutrition, health, and energy.">
+<meta name="description" content="Earthly Sprouts — Premium hygienically packed sprouts for daily nutrition and energy.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --green:#2e7d32;
   --dark:#1b5e20;
@@ -26,16 +28,19 @@ body{
   font-family:'Poppins',sans-serif;
   scroll-behavior:smooth;
   color:#333;
-  background:white;
 }
 
 /* HEADER */
+
 header{
   position:fixed;
   width:100%;
   top:0;
   left:0;
   padding:28px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
   transition:.4s;
   z-index:1000;
 }
@@ -46,16 +51,34 @@ header.small{
   padding:12px 40px;
 }
 
-.logo{
-  height:110px;
+/* hidden logo initially */
+.left-logo{
+  height:55px;
+  opacity:0;
+  transform:translateY(-20px);
   transition:.4s;
 }
 
-header.small .logo{
-  height:55px;
+/* show logo after scroll */
+header.small .left-logo{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* right contact */
+.header-contact{
+  font-weight:500;
+  color:var(--green);
+  opacity:0;
+  transition:.4s;
+}
+
+header.small .header-contact{
+  opacity:1;
 }
 
 /* HERO */
+
 .hero{
   height:100vh;
   display:flex;
@@ -68,29 +91,26 @@ header.small .logo{
 
 .hero img{
   width:340px;
-  max-width:80%;
+  max-width:85%;
   animation:fadeUp 1s ease;
 }
 
 @keyframes fadeUp{
-  from{opacity:0; transform:translateY(30px)}
+  from{opacity:0; transform:translateY(40px)}
   to{opacity:1; transform:translateY(0)}
 }
 
-/* SPLIT SECTION */
-.split-section{
-  display:flex;
-  flex-wrap:wrap;
-  gap:30px;
-  padding:120px 60px;
-  max-width:1200px;
-  margin:auto;
+/* PRODUCT SECTION */
+
+.section{
+  padding:120px 20px;
+  text-align:center;
 }
 
 .card{
-  flex:1;
-  min-width:280px;
-  padding:40px;
+  max-width:700px;
+  margin:auto;
+  padding:45px;
   border-radius:14px;
   background:white;
   box-shadow:0 10px 30px rgba(0,0,0,0.05);
@@ -111,6 +131,7 @@ header.small .logo{
 }
 
 /* BUTTON */
+
 .btn{
   display:inline-block;
   margin-top:20px;
@@ -129,6 +150,7 @@ header.small .logo{
 }
 
 /* CERTIFICATES */
+
 .certificates{
   padding:110px 20px;
   background:var(--light);
@@ -145,6 +167,7 @@ header.small .logo{
 }
 
 /* FOOTER */
+
 footer{
   text-align:center;
   padding:25px;
@@ -154,6 +177,7 @@ footer{
 }
 
 /* MOBILE */
+
 @media(max-width:700px){
 
 header{
@@ -164,63 +188,67 @@ header.small{
   padding:10px 20px;
 }
 
-.split-section{
-  padding:90px 20px;
+.hero img{
+  width:260px;
 }
 
-.logo{
-  height:85px;
 }
 
-header.small .logo{
-  height:50px;
-}
-}
 </style>
 </head>
 
 <body>
 
 <header id="navbar">
-  <img src="logo.png" class="logo" alt="Earthly Sprouts Logo">
+
+<img src="logo.png" class="left-logo" alt="logo">
+
+<div class="header-contact">
+📞 +91-XXXXXXXXXX
+</div>
+
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <img src="logo.png" alt="Earthly Sprouts Brand Logo">
+<img src="logo.png" alt="Earthly Sprouts Logo">
 </section>
 
-<section class="split-section">
+<!-- PRODUCT -->
+<section class="section">
+<div class="card">
 
-  <div class="card">
-    <h2>Our Product</h2>
-    <p>
-      Premium hygienically packed sprouts crafted to fuel your body with natural protein, fiber, and daily vitality.
-    </p>
-    <a href="https://amazon.in" target="_blank" class="btn" aria-label="Buy Earthly Sprouts on Amazon">Buy on Amazon</a>
-  </div>
+<h2>Our Product</h2>
 
-  <div class="card">
-    <h2>Contact Us</h2>
-    <p>Email: your@email.com</p>
-    <p>Phone: +91-XXXXXXXXXX</p>
-  </div>
+<p>
+Premium hygienically packed sprouts crafted to fuel your body with natural protein, fiber, and daily vitality.
+</p>
 
+<a href="https://amazon.in" target="_blank" class="btn">
+Buy on Amazon
+</a>
+
+</div>
 </section>
 
+<!-- CERTIFICATIONS -->
 <section class="certificates">
-  <h2>Licenses & Certifications</h2>
-  <p>FSSAI Licensed Product</p>
-  <p>License Number: XXXXXXXX</p>
+
+<h2>Licenses & Certifications</h2>
+
+<p>FSSAI Licensed Product</p>
+<p>License Number: XXXXXXXX</p>
+
 </section>
 
 <footer>
-  © 2026 Earthly Sprouts. All rights reserved.
+© 2026 Earthly Sprouts. All rights reserved.
 </footer>
 
 <script>
 window.addEventListener("scroll",()=>{
-  const header=document.getElementById("navbar");
-  header.classList.toggle("small",window.scrollY>80);
+const header=document.getElementById("navbar");
+header.classList.toggle("small",window.scrollY>250);
 });
 </script>
 
