@@ -3,109 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Earthly Sprouts</title>
+<title>Earthly Sprouts | Premium Natural Nutrition</title>
+
+<meta name="description" content="Earthly Sprouts — Premium hygienically packed sprouts for daily nutrition, health, and energy.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+:root{
+  --green:#2e7d32;
+  --dark:#1b5e20;
+  --light:#f4f9f4;
 }
 
-body {
-  scroll-behavior: smooth;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+  color:#333;
+  background:white;
 }
 
 /* HEADER */
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 30px 40px;
-  transition: 0.4s ease;
-  z-index: 1000;
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  padding:28px 40px;
+  transition:.4s;
+  z-index:1000;
 }
 
-header.small {
-  background: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 10px 40px;
+header.small{
+  background:white;
+  box-shadow:0 3px 15px rgba(0,0,0,0.08);
+  padding:12px 40px;
 }
 
-.logo {
-  height: 120px;
-  transition: 0.4s ease;
+.logo{
+  height:110px;
+  transition:.4s;
 }
 
-header.small .logo {
-  height: 60px;
+header.small .logo{
+  height:55px;
 }
 
 /* HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(to bottom,#ffffff,#f9fff9);
+  padding:20px;
 }
 
-.hero img {
-  width: 350px;
+.hero img{
+  width:340px;
+  max-width:80%;
+  animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px)}
+  to{opacity:1; transform:translateY(0)}
 }
 
 /* SPLIT SECTION */
-.split-section {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 120px 40px;
+.split-section{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  padding:120px 60px;
+  max-width:1200px;
+  margin:auto;
 }
 
-.left, .right {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
+.card{
+  flex:1;
+  min-width:280px;
+  padding:40px;
+  border-radius:14px;
+  background:white;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  transition:.3s;
 }
 
-.left h2, .right h2 {
-  color: #2e7d32;
-  margin-bottom: 15px;
+.card:hover{
+  transform:translateY(-6px);
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  background-color: #2e7d32;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
+.card h2{
+  color:var(--green);
+  margin-bottom:15px;
 }
 
-.btn:hover {
-  background-color: #1b5e20;
+.card p{
+  line-height:1.6;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:13px 28px;
+  background:var(--green);
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:500;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:var(--dark);
+  transform:scale(1.05);
 }
 
 /* CERTIFICATES */
-.certificates {
-  padding: 100px 40px;
-  background: #f4f9f4;
-  text-align: center;
+.certificates{
+  padding:110px 20px;
+  background:var(--light);
+  text-align:center;
 }
 
-.certificates h2 {
-  color: #2e7d32;
-  margin-bottom: 20px;
+.certificates h2{
+  color:var(--green);
+  margin-bottom:20px;
+}
+
+.certificates p{
+  margin:8px 0;
 }
 
 /* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #1b5e20;
-  color: white;
+footer{
+  text-align:center;
+  padding:25px;
+  background:var(--dark);
+  color:white;
+  font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+header{
+  padding:18px 20px;
+}
+
+header.small{
+  padding:10px 20px;
+}
+
+.split-section{
+  padding:90px 20px;
+}
+
+.logo{
+  height:85px;
+}
+
+header.small .logo{
+  height:50px;
+}
 }
 </style>
 </head>
@@ -117,21 +186,25 @@ footer {
 </header>
 
 <section class="hero">
-  <img src="logo.png" alt="Earthly Sprouts Logo">
+  <img src="logo.png" alt="Earthly Sprouts Brand Logo">
 </section>
 
 <section class="split-section">
-  <div class="left">
+
+  <div class="card">
     <h2>Our Product</h2>
-    <p>Premium hygienically packed sprouts made for daily nutrition and energy.</p>
-    <a href="https://amazon.in" target="_blank" class="btn">Buy on Amazon</a>
+    <p>
+      Premium hygienically packed sprouts crafted to fuel your body with natural protein, fiber, and daily vitality.
+    </p>
+    <a href="https://amazon.in" target="_blank" class="btn" aria-label="Buy Earthly Sprouts on Amazon">Buy on Amazon</a>
   </div>
 
-  <div class="right">
+  <div class="card">
     <h2>Contact Us</h2>
     <p>Email: your@email.com</p>
     <p>Phone: +91-XXXXXXXXXX</p>
   </div>
+
 </section>
 
 <section class="certificates">
@@ -145,13 +218,9 @@ footer {
 </footer>
 
 <script>
-window.addEventListener("scroll", function() {
-  let header = document.getElementById("navbar");
-  if (window.scrollY > 100) {
-    header.classList.add("small");
-  } else {
-    header.classList.remove("small");
-  }
+window.addEventListener("scroll",()=>{
+  const header=document.getElementById("navbar");
+  header.classList.toggle("small",window.scrollY>80);
 });
 </script>
 
