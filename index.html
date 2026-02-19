@@ -10,71 +10,68 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
   scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+/* HEADER */
 header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(10px);
-  padding: 25px 0;
-  text-align: center;
-  transition: 0.3s ease;
+  padding: 30px 40px;
+  transition: 0.4s ease;
   z-index: 1000;
 }
 
 header.small {
-  padding: 10px 0;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 10px 40px;
 }
 
-header h1 {
-  font-size: 40px;
-  color: #2e7d32;
-  transition: 0.3s ease;
+.logo {
+  height: 120px;
+  transition: 0.4s ease;
 }
 
-header.small h1 {
-  font-size: 22px;
+header.small .logo {
+  height: 60px;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   height: 100vh;
-  background: linear-gradient(135deg, #d4edda, #a8e6cf);
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  background: white;
 }
 
-.hero-content h2 {
-  font-size: 60px;
-  color: #1b5e20;
+.hero img {
+  width: 350px;
 }
 
-.hero-content p {
-  font-size: 20px;
-  margin-top: 15px;
+/* SPLIT SECTION */
+.split-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 120px 40px;
 }
 
-/* SECTIONS */
-section {
-  padding: 100px 20px;
-  text-align: center;
+.left, .right {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
 }
 
-section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.left h2, .right h2 {
   color: #2e7d32;
+  margin-bottom: 15px;
 }
 
 .btn {
@@ -85,18 +82,30 @@ section h2 {
   color: white;
   text-decoration: none;
   border-radius: 6px;
-  font-weight: bold;
 }
 
 .btn:hover {
   background-color: #1b5e20;
 }
 
+/* CERTIFICATES */
+.certificates {
+  padding: 100px 40px;
+  background: #f4f9f4;
+  text-align: center;
+}
+
+.certificates h2 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
 /* FOOTER */
 footer {
-  background-color: #1b5e20;
-  color: white;
+  text-align: center;
   padding: 20px;
+  background: #1b5e20;
+  color: white;
 }
 </style>
 </head>
@@ -104,32 +113,31 @@ footer {
 <body>
 
 <header id="navbar">
-  <h1>🌱 Earthly Sprouts</h1>
+  <img src="logo.png" class="logo" alt="Earthly Sprouts Logo">
 </header>
 
-<div class="hero">
-  <div class="hero-content">
-    <h2>Fresh. Healthy. Natural.</h2>
-    <p>Premium quality sprouts for daily nutrition.</p>
+<section class="hero">
+  <img src="logo.png" alt="Earthly Sprouts Logo">
+</section>
+
+<section class="split-section">
+  <div class="left">
+    <h2>Our Product</h2>
+    <p>Premium hygienically packed sprouts made for daily nutrition and energy.</p>
+    <a href="https://amazon.in" target="_blank" class="btn">Buy on Amazon</a>
   </div>
-</div>
 
-<section>
-  <h2>Our Product</h2>
-  <p>Hygienically packed, farm-fresh sprouts made with care.</p>
-  <a class="btn" href="https://amazon.in" target="_blank">Buy on Amazon</a>
+  <div class="right">
+    <h2>Contact Us</h2>
+    <p>Email: your@email.com</p>
+    <p>Phone: +91-XXXXXXXXXX</p>
+  </div>
 </section>
 
-<section>
-  <h2>Licensing</h2>
+<section class="certificates">
+  <h2>Licenses & Certifications</h2>
   <p>FSSAI Licensed Product</p>
-  <p>License No: XXXXXXXX</p>
-</section>
-
-<section>
-  <h2>Contact Us</h2>
-  <p>Email: your@email.com</p>
-  <p>Phone: +91-XXXXXXXXXX</p>
+  <p>License Number: XXXXXXXX</p>
 </section>
 
 <footer>
