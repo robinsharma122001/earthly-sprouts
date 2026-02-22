@@ -4,194 +4,175 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Earthly Sprouts | Premium Natural Nutrition</title>
-
-<meta name="description" content="Earthly Sprouts — Premium hygienically packed sprouts for daily nutrition and energy.">
+<title>Earthly Sprouts</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
-  --green:#2e7d32;
-  --dark:#1b5e20;
-  --light:#f4f9f4;
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:#fafafa;color:#222}
+
+/* announcement bar */
+.topbar{
+background:#7b1b5e;
+color:white;
+text-align:center;
+padding:8px;
+font-size:14px;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:'Poppins',sans-serif;
-  scroll-behavior:smooth;
-  color:#333;
-}
-
-/* HEADER */
-
+/* header */
 header{
-  position:fixed;
-  width:100%;
-  top:0;
-  left:0;
-  padding:28px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  transition:.4s;
-  z-index:1000;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:18px;
+background:white;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-header.small{
-  background:white;
-  box-shadow:0 3px 15px rgba(0,0,0,0.08);
-  padding:12px 40px;
+header img{
+height:60px;
 }
 
-/* hidden logo initially */
-.left-logo{
-  height:55px;
-  opacity:0;
-  transform:translateY(-20px);
-  transition:.4s;
-}
-
-/* show logo after scroll */
-header.small .left-logo{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* right contact */
-.header-contact{
-  font-weight:500;
-  color:var(--green);
-  opacity:0;
-  transition:.4s;
-}
-
-header.small .header-contact{
-  opacity:1;
-}
-
-/* HERO */
-
+/* hero slider */
 .hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background:linear-gradient(to bottom,#ffffff,#f9fff9);
-  padding:20px;
+padding:20px;
 }
 
 .hero img{
-  width:340px;
-  max-width:85%;
-  animation:fadeUp 1s ease;
+width:100%;
+border-radius:16px;
+height:260px;
+object-fit:cover;
 }
 
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(40px)}
-  to{opacity:1; transform:translateY(0)}
+/* info section */
+.info{
+text-align:center;
+padding:40px 20px;
+max-width:800px;
+margin:auto;
 }
 
-/* PRODUCT SECTION */
-
-.section{
-  padding:120px 20px;
-  text-align:center;
+.info h2{
+font-size:28px;
+margin-bottom:20px;
 }
 
-.card{
-  max-width:700px;
-  margin:auto;
-  padding:45px;
-  border-radius:14px;
-  background:white;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
-  transition:.3s;
+.info p{
+font-size:18px;
+line-height:1.6;
 }
 
-.card:hover{
-  transform:translateY(-6px);
+/* section title */
+.section-title{
+font-size:24px;
+text-align:center;
+margin:40px 0 20px;
+letter-spacing:1px;
 }
 
-.card h2{
-  color:var(--green);
-  margin-bottom:15px;
+/* product grid */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:20px;
 }
 
-.card p{
-  line-height:1.6;
+.product{
+background:white;
+padding:15px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+transition:.3s;
 }
 
-/* BUTTON */
+.product:hover{
+transform:translateY(-6px);
+}
 
+.product img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:10px;
+}
+
+/* button */
 .btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:13px 28px;
-  background:var(--green);
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:500;
-  transition:.3s;
+display:inline-block;
+margin-top:10px;
+padding:10px 18px;
+background:#2e7d32;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-size:14px;
 }
 
-.btn:hover{
-  background:var(--dark);
-  transform:scale(1.05);
+/* newsletter */
+.newsletter{
+background:#7b1b5e;
+color:white;
+text-align:center;
+padding:60px 20px;
+margin-top:40px;
 }
 
-/* CERTIFICATES */
-
-.certificates{
-  padding:110px 20px;
-  background:var(--light);
-  text-align:center;
+.newsletter h2{
+font-size:28px;
+margin-bottom:15px;
 }
 
-.certificates h2{
-  color:var(--green);
-  margin-bottom:20px;
+.newsletter input{
+padding:12px;
+width:260px;
+max-width:80%;
+border:none;
+border-radius:8px;
+margin-top:15px;
 }
 
-.certificates p{
-  margin:8px 0;
+.newsletter button{
+padding:12px 25px;
+border:none;
+background:#2e7d32;
+color:white;
+border-radius:8px;
+margin-left:8px;
+cursor:pointer;
 }
 
-/* FOOTER */
-
-footer{
-  text-align:center;
-  padding:25px;
-  background:var(--dark);
-  color:white;
-  font-size:14px;
+/* whatsapp button */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:26px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
 }
 
-/* MOBILE */
-
-@media(max-width:700px){
-
-header{
-  padding:18px 20px;
-}
-
-header.small{
-  padding:10px 20px;
-}
-
-.hero img{
-  width:260px;
-}
-
+/* mobile */
+@media(max-width:600px){
+.info h2{font-size:22px}
+.info p{font-size:16px}
 }
 
 </style>
@@ -199,58 +180,58 @@ header.small{
 
 <body>
 
-<header id="navbar">
-
-<img src="logo.png" class="left-logo" alt="logo">
-
-<div class="header-contact">
-📞 +91-XXXXXXXXXX
+<div class="topbar">
+Free Delivery above ₹500 | Order before 6PM for next day delivery
 </div>
 
+<header>
+<img src="logo.png">
 </header>
 
-<!-- HERO -->
 <section class="hero">
-<img src="logo.png" alt="Earthly Sprouts Logo">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
 </section>
 
-<!-- PRODUCT -->
-<section class="section">
-<div class="card">
-
-<h2>Our Product</h2>
-
+<section class="info">
+<h2>Fresh Sprouts Delivered to Your Doorstep</h2>
 <p>
-Premium hygienically packed sprouts crafted to fuel your body with natural protein, fiber, and daily vitality.
+Order before 6PM for next-day delivery. Minimum order ₹500.  
+Serving fresh nutrition daily with hygienic packaging and premium quality ingredients.
 </p>
+</section>
 
-<a href="https://amazon.in" target="_blank" class="btn">
-Buy on Amazon
-</a>
+<h2 class="section-title">NEW ON THE SHELVES</h2>
 
+<section class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1542838132-92c53300491e">
+<h4>Moong Sprouts</h4>
+<a href="#" class="btn">View</a>
 </div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
+<h4>Mix Sprouts</h4>
+<a href="#" class="btn">View</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1540420773420-3366772f4999">
+<h4>Protein Mix</h4>
+<a href="#" class="btn">View</a>
+</div>
+
 </section>
 
-<!-- CERTIFICATIONS -->
-<section class="certificates">
-
-<h2>Licenses & Certifications</h2>
-
-<p>FSSAI Licensed Product</p>
-<p>License Number: XXXXXXXX</p>
-
+<section class="newsletter">
+<h2>Newsletter</h2>
+<p>Subscribe to receive updates and exclusive offers</p>
+<input placeholder="Enter email">
+<button>Subscribe</button>
 </section>
 
-<footer>
-© 2026 Earthly Sprouts. All rights reserved.
-</footer>
-
-<script>
-window.addEventListener("scroll",()=>{
-const header=document.getElementById("navbar");
-header.classList.toggle("small",window.scrollY>250);
-});
-</script>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">💬</a>
 
 </body>
 </html>
